@@ -13,9 +13,6 @@ A modern front-end clone of the Amazon homepage built using **HTML5** and **CSS3
 ```
 https://genZadelio.github.io/Amazon-Clone/
 ```
-
-*(Replace with your repository URL after enabling GitHub Pages.)*
-
 ---
 
 # ✨ Features
@@ -127,8 +124,6 @@ Building this project helped me improve my understanding of:
 
 ## Adelio Ghosh
 
-* 💻 HTML
-* 🎨 CSS
 
 GitHub:
 https://github.com/genZadelio
