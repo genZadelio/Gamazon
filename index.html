@@ -1,356 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon Clone</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
+    <meta name="description" content="Gamazon is an original educational storefront interface demo using fictional sample data. No account, checkout, payment, tracking, or personal-data collection.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Gamazon — Educational Storefront Demo">
+    <meta property="og:description" content="Explore a responsive storefront interface concept with original assets and fictional sample data.">
+    <meta property="og:url" content="https://gamazon-adelio.netlify.app/">
+    <link rel="canonical" href="https://gamazon-adelio.netlify.app/">
+    <title>Gamazon — Educational Storefront Demo</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
+<body id="top">
+    <div class="demo-banner" role="note">
+        <strong>Educational demo</strong>
+        <span>Gamazon is a fictional storefront brand and is not affiliated with Amazon. No account, checkout, payment, tracking, or personal-data collection.</span>
+    </div>
 
-<body>
     <header>
         <div class="navbar">
-            <div class="nav-logo border">
-                <div class="logo"></div>
-            </div>
+            <a class="nav-logo" href="#top" aria-label="Gamazon home">
+                <img src="assets/gamazon-logo.svg" alt="Gamazon">
+            </a>
 
             <div class="nav-address border">
-                <p class="add-first">Deliver to</p>
+                <p class="add-first">Explore</p>
                 <div class="add-icon">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <p class="add-second">India</p>
+                    <span class="nav-symbol" aria-hidden="true">✦</span>
+                    <p class="add-second">Sample catalog</p>
                 </div>
             </div>
 
-            <div class="nav-search">
-                <select class="search-select">
+            <div class="nav-search" role="search" aria-label="Search sample catalog">
+                <select class="search-select" aria-label="Sample category filter">
                     <option>All</option>
+                    <option>Electronics</option>
+                    <option>Fashion</option>
+                    <option>Home</option>
+                    <option>Play</option>
+                    <option>Wellness</option>
                 </select>
-                <input placeholder="Search Amazon" class="search-input">
-                <div class="search-icon">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
+                <input id="searchInput" type="search" placeholder="Search the sample catalog" aria-label="Search sample products">
+                <span class="search-icon" aria-hidden="true">⌕</span>
             </div>
 
-            <div class="nav-en border">
-                <i class="fa-solid fa-flag-usa"></i>
-                <select class="select-en">
-                    <option>EN</option>
-                </select>
+            <div class="nav-language border">
+                <span aria-hidden="true">◎</span>
+                <span>EN</span>
             </div>
 
-            <div class="nav-signin border">
-                <p><span>Hello, Sign in</span></p>
-                <select class="nav-second">
-                    <option>Account & Lists</option>
-                </select>
+            <div class="nav-demo border">
+                <p><span>Demo mode</span></p>
+                <p class="nav-second">No account needed</p>
             </div>
 
             <div class="nav-return border">
-                <p><span>Returns</span></p>
-                <p class="nav-second">& Orders</p>
+                <p><span>Sample</span></p>
+                <p class="nav-second">& Categories</p>
             </div>
 
-            <div class="nav-cart border">
-                <i class="fa-solid fa-cart-shopping"></i>Cart
-            </div>
+            <a class="nav-catalog border" href="#catalog">
+                <span aria-hidden="true">▦</span> Catalog
+            </a>
         </div>
 
-        <div class="panel">
-            <div class="panel-all border">
-                <i class="fa-solid fa-bars"></i>All
-            </div>
-
+        <nav class="panel" aria-label="Sample catalog sections">
+            <a class="panel-all border" href="#catalog"><span aria-hidden="true">☰</span> All samples</a>
             <div class="panel-ops">
-                <p class="border">Today's Deals</p>
-                <p class="border">Prime Video</p>
-                <p class="border">Sell</p>
-                <p class="border">Gift Cards</p>
-                <p class="border">Registry</p>
-                <p class="border">Customer Service</p>
+                <a href="#catalog">Electronics</a>
+                <a href="#catalog">Fashion</a>
+                <a href="#catalog">Home</a>
+                <a href="#catalog">Play</a>
+                <a href="#catalog">Wellness</a>
             </div>
-
-            <div class="panel-deals border">
-                Shop deals in Electronics
-            </div>
-        </div>
+            <a class="panel-deals border" href="#catalog">Explore fictional collections</a>
+        </nav>
     </header>
 
     <div class="hero-section">
         <div class="hero-msg">
-            You are on amazon.com. You can also shop on Amazon India for millions of products with fast local delivery.<a href="https://amazon.in" target="_main"> Click here to go to amazon.in</a>
+            You are viewing an educational storefront interface. Every product card, image, and category label is fictional or illustrative.
         </div>
     </div>
 
-    <div class="shop-section">
-        <div class="box1 box">
-            <div class="box-content">
-                <h2>Must-haves for every student</h2>
-                <div class="box-image" style="background-image: url('https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2026/BTS2026/Fuji_SingleImageCard_BTS_SH26_1x._SY304_CB788455970_.jpg')"></div>
-                <a href="#">Shop Back to School</a>
-            </div>
-        </div>
+    <main id="catalog" class="shop-section" aria-label="Sample product categories">
+        <article class="box" data-category="electronics">
+            <div class="box-content"><h2>Campus essentials</h2><div class="box-image" style="background-image:url('assets/categories/category-01.svg')"></div><a href="#catalog">View sample</a></div>
+        </article>
+        <article class="box" data-category="electronics">
+            <div class="box-content"><h2>Focus tech</h2><div class="box-image" style="background-image:url('assets/categories/category-02.svg')"></div><a href="#catalog">View sample</a></div>
+        </article>
+        <article class="box" data-category="fashion">
+            <div class="box-content"><h2>Everyday apparel</h2><div class="box-image" style="background-image:url('assets/categories/category-03.svg')"></div><a href="#catalog">View sample</a></div>
+        </article>
+        <article class="box" data-category="electronics">
+            <div class="box-content"><h2>Study station</h2><div class="box-image" style="background-image:url('assets/categories/category-04.svg')"></div><a href="#catalog">View sample</a></div>
+        </article>
+        <article class="box" data-category="home">
+            <div class="box-content"><h2>Cozy home</h2><div class="box-image" style="background-image:url('assets/categories/category-05.svg')"></div><a href="#catalog">View sample</a></div>
+        </article>
+        <article class="box" data-category="home">
+            <div class="box-content"><h2>Kitchen concepts</h2><div class="box-image" style="background-image:url('assets/categories/category-06.svg')"></div><a href="#catalog">View sample</a></div>
+        </article>
+        <article class="box" data-category="fashion">
+            <div class="box-content"><h2>Modern style</h2><div class="box-image" style="background-image:url('assets/categories/category-07.svg')"></div><a href="#catalog">View sample</a></div>
+        </article>
+        <article class="box" data-category="home">
+            <div class="box-content"><h2>Calm living</h2><div class="box-image" style="background-image:url('assets/categories/category-08.svg')"></div><a href="#catalog">View sample</a></div>
+        </article>
+        <article class="box" data-category="electronics">
+            <div class="box-content"><h2>Smart home</h2><div class="box-image" style="background-image:url('assets/categories/category-09.svg')"></div><a href="#catalog">View sample</a></div>
+        </article>
+        <article class="box" data-category="electronics">
+            <div class="box-content"><h2>Wireless lab</h2><div class="box-image" style="background-image:url('assets/categories/category-10.svg')"></div><a href="#catalog">View sample</a></div>
+        </article>
+        <article class="box" data-category="fashion">
+            <div class="box-content"><h2>Active wear</h2><div class="box-image" style="background-image:url('assets/categories/category-11.svg')"></div><a href="#catalog">View sample</a></div>
+        </article>
+        <article class="box" data-category="fashion">
+            <div class="box-content"><h2>Accessory stories</h2><div class="box-image" style="background-image:url('assets/categories/category-12.svg')"></div><a href="#catalog">View sample</a></div>
+        </article>
+        <article class="box" data-category="play">
+            <div class="box-content"><h2>Creative play</h2><div class="box-image" style="background-image:url('assets/categories/category-13.svg')"></div><a href="#catalog">View sample</a></div>
+        </article>
+        <article class="box" data-category="play">
+            <div class="box-content"><h2>Team merchandise</h2><div class="box-image" style="background-image:url('assets/categories/category-14.svg')"></div><a href="#catalog">View sample</a></div>
+        </article>
+        <article class="box" data-category="play">
+            <div class="box-content"><h2>Game worlds</h2><div class="box-image" style="background-image:url('assets/categories/category-15.svg')"></div><a href="#catalog">View sample</a></div>
+        </article>
+        <article class="box" data-category="fashion">
+            <div class="box-content"><h2>Everyday fashion</h2><div class="box-image" style="background-image:url('assets/categories/category-16.svg')"></div><a href="#catalog">View sample</a></div>
+        </article>
+        <article class="box" data-category="play">
+            <div class="box-content"><h2>Collectible figures</h2><div class="box-image" style="background-image:url('assets/categories/category-17.svg')"></div><a href="#catalog">View sample</a></div>
+        </article>
+        <article class="box" data-category="wellness">
+            <div class="box-content"><h2>Wellness rituals</h2><div class="box-image" style="background-image:url('assets/categories/category-18.svg')"></div><a href="#catalog">View sample</a></div>
+        </article>
+        <article class="box" data-category="electronics">
+            <div class="box-content"><h2>Desk setup</h2><div class="box-image" style="background-image:url('assets/categories/category-19.svg')"></div><a href="#catalog">View sample</a></div>
+        </article>
+        <article class="box" data-category="home">
+            <div class="box-content"><h2>Room refresh</h2><div class="box-image" style="background-image:url('assets/categories/category-20.svg')"></div><a href="#catalog">View sample</a></div>
+        </article>
+        <article class="box" data-category="wellness">
+            <div class="box-content"><h2>Beauty basics</h2><div class="box-image" style="background-image:url('assets/categories/category-21.svg')"></div><a href="#catalog">View sample</a></div>
+        </article>
+        <article class="box" data-category="home">
+            <div class="box-content"><h2>Local makers</h2><div class="box-image" style="background-image:url('assets/categories/category-22.svg')"></div><a href="#catalog">View sample</a></div>
+        </article>
+        <article class="box" data-category="electronics">
+            <div class="box-content"><h2>Tech lab</h2><div class="box-image" style="background-image:url('assets/categories/category-23.svg')"></div><a href="#catalog">View sample</a></div>
+        </article>
+        <article class="box" data-category="home">
+            <div class="box-content"><h2>Thoughtful spaces</h2><div class="box-image" style="background-image:url('assets/categories/category-24.svg')"></div><a href="#catalog">View sample</a></div>
+        </article>
+    </main>
 
-        <div class="box2 box ">
-            <div class="box-content">
-                <h2>Get your game on</h2>
-                <div class="box-image" style="background-image:url('https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2026/Gaming_26/Fuji_Gaming_SingleImageCard_C-1._SY304_CB762596570_.jpg')"></div>
-                <a href="#">Shop Gaming</a>
-            </div>
-        </div>
-
-        <div class="box3 box ">
-            <div class="box-content">
-                <h2>Shop fashion for less</h2>
-                <div class="box-image" style="background-image:url('https://m.media-amazon.com/images/I/81Ojm7m2gpL._AC_UL480_FMwebp_QL65_.jpg')"></div>
-                <a href="#">See all Deals</a>
-            </div>
-        </div>
-
-        <div class="box4 box ">
-            <div class="box-content">
-                <h2>Must-have school supplies</h2>
-                <div class="box-image" style="background-image:url('https://m.media-amazon.com/images/G/01/AmazonExports/Events/2024/Store-BTS/Cat/Sports_Gear.png')"></div>
-                <a href="#">Shop Back to School</a>
-            </div>
-        </div>
-
-        <div class="box5 box">
-            <div class="box-content">
-                <h2>New home arrivals under $50</h2>
-                <div class="box-image" style="background-image: url('https://m.media-amazon.com/images/I/71lylM-9P4L._AC_UL480_FMwebp_QL65_.jpg')"></div>
-                <a href="#">Shop the latest from Home</a>
-            </div>
-        </div>
-
-        <div class="box6 box ">
-            <div class="box-content">
-                <h2>Top categories in Kitchen appliances</h2>
-                <div class="box-image" style="background-image:url('https://m.media-amazon.com/images/I/717p92cRQjL._AC_UL480_FMwebp_QL65_.jpg')"></div>
-                <a href="#">Explore all products in kitchen</a>
-            </div>
-        </div>
-
-        <div class="box7 box ">
-            <div class="box-content">
-                <h2>Fashion trends you like</h2>
-                <div class="box-image" style="background-image:url('https://m.media-amazon.com/images/I/81gEuxoe46L._AC_UL480_FMwebp_QL65_.jpg')"></div>
-                <a href="#">Explore more</a>
-            </div>
-        </div>
-
-        <div class="box8 box ">
-            <div class="box-content">
-                <h2>Easy updates for elevated spaces</h2>
-                <div class="box-image" style="background-image:url('https://m.media-amazon.com/images/I/81x2NaWOZqL._SL1500_.jpg')"></div>
-                <a href="#">Shop home products</a>
-            </div>
-        </div>
-
-        <div class="box9 box ">
-            <div class="box-content">
-                <h2>Best sellers in Home & Kitchen</h2>
-                <div class="box-image" style="background-image:url('https://m.media-amazon.com/images/I/71O5+I+kA6L._AC_SX679_.jpg')"></div>
-                <a href="#">Shop home products</a>
-            </div>
-        </div>
-
-        <div class="box10 box ">
-            <div class="box-content">
-                <h2>Popular items this season</h2>
-                <div class="box-image" style="background-image:url('https://m.media-amazon.com/images/I/71JeCqxixYL._AC_SY550_.jpg')"></div>
-                <a href="#">Shop other items</a>
-            </div>
-        </div>
-
-        <div class="box11 box ">
-            <div class="box-content">
-                <h2>Elevate your electronics</h2>
-                <div class="box-image" style="background-image:url('https://m.media-amazon.com/images/I/61eknVF1fvL._AC_SX466_.jpg')"></div>
-                <a href="#">Discover more</a>
-            </div>
-        </div>
-
-        <div class="box12 box ">
-            <div class="box-content">
-                <h2>Wireless tech</h2>
-                <div class="box-image" style="background-image:url('https://m.media-amazon.com/images/I/41+ftcBTX5L._AC_SX679_.jpg')"></div>
-                <a href="#">Discover more</a>
-            </div>
-        </div>
-
-        <div class="box13 box ">
-            <div class="box-content">
-                <h2>Gear up to get fit</h2>
-                <div class="box-image" style="background-image:url('https://m.media-amazon.com/images/I/71Am9bAgXtL._AC_SX679_.jpg')"></div>
-                <a href="#">Discover more</a>
-            </div>
-        </div>
-
-        <div class="box14 box ">
-            <div class="box-content">
-                <h2>Most-loved watches for girls</h2>
-                <div class="box-image" style="background-image:url('https://m.media-amazon.com/images/I/81Y19fyi6zL._AC_SX679_.jpg')"></div>
-                <a href="#">Discover more</a>
-            </div>
-        </div>
-
-        <div class="box15 box ">
-            <div class="box-content">
-                <h2>Toys for all ages</h2>
-                <div class="box-image" style="background-image:url('https://m.media-amazon.com/images/I/713M+bcQESL._AC_SX679_.jpg')"></div>
-                <a href="#">See more</a>
-            </div>
-        </div>
-
-        <div class="box16 box ">
-            <div class="box-content">
-                <h2>Gaming merchandise</h2>
-                <div class="box-image" style="background-image:url('https://m.media-amazon.com/images/I/719XHbmvmBL._SX425_.jpg')"></div>
-                <a href="#">See more</a>
-            </div>
-        </div>
-
-        <div class="box17 box ">
-            <div class="box-content">
-                <h2>Video games for low prices</h2>
-                <div class="box-image" style="background-image:url('https://m.media-amazon.com/images/I/71dIHv1zh7L._SY500_.jpg')"></div>
-                <a href="#">Shop more products</a>
-            </div>
-        </div>
-
-        <div class="box18 box ">
-            <div class="box-content">
-                <h2>Apparels for low prices</h2>
-                <div class="box-image" style="background-image:url('https://m.media-amazon.com/images/I/51wDsZxtTLL._AC_SX569_.jpg')"></div>
-                <a href="#">Shop more products</a>
-            </div>
-        </div>
-
-        <div class="box19 box ">
-            <div class="box-content">
-                <h2>Action figures for low prices</h2>
-                <div class="box-image" style="background-image:url('https://m.media-amazon.com/images/I/51Zbmyz2UsL._AC_SX679_.jpg')"></div>
-                <a href="#">Shop more products</a>
-            </div>
-        </div>
-
-        <div class="box20 box ">
-            <div class="box-content">
-                <h2>Level up your beauty routine</h2>
-                <div class="box-image" style="background-image:url('https://m.media-amazon.com/images/I/71Pk+MKENwL._SX466_.jpg')"></div>
-                <a href="#">See more</a>
-            </div>
-        </div>
-
-        <div class="box21 box ">
-            <div class="box-content">
-                <h2>Level up your PC here</h2>
-                <div class="box-image" style="background-image:url('https://m.media-amazon.com/images/I/81KDpNHeS+L._AC_SX466_.jpg')"></div>
-                <a href="#">discover more</a>
-            </div>
-        </div>
-
-        <div class="box22 box ">
-            <div class="box-content">
-                <h2>Finds for home</h2>
-                <div class="box-image" style="background-image:url('https://m.media-amazon.com/images/I/81GZZyozv-L._AC_SX679_.jpg')"></div>
-                <a href="#">Shop home products</a>
-            </div>
-        </div>
-
-        <div class="box23 box ">
-            <div class="box-content">
-                <h2>Curate your space</h2>
-                <div class="box-image" style="background-image:url('https://m.media-amazon.com/images/I/91EKpuuyqlL._AC_SX679_.jpg')"></div>
-                <a href="#">See more</a>
-            </div>
-        </div>
-
-        <div class="box24 box ">
-            <div class="box-content">
-                <h2>Discover these beauty products</h2>
-                <div class="box-image" style="background-image:url('https://m.media-amazon.com/images/I/61NvTGruLoL._SX466_.jpg')"></div>
-                <a href="#">Explore all in Beauty</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="section-see">
-        <h2>See personalized recommendations</h2>
-        <button>Sign in</button>
-        <p>New customer?<a href="#">Start here</a></p>
-    </div>
-    <hr>
+    <section class="section-see" aria-labelledby="exploreTitle">
+        <h2 id="exploreTitle">Explore the interface</h2>
+        <button id="resetSearch" type="button">Reset sample filters</button>
+        <p id="resultCount" aria-live="polite">24 sample cards shown</p>
+    </section>
 
     <footer>
         <div class="foot-panel1">
-            <a href="https://amazon.com">Back to top</a>
+            <a href="#top">Back to top</a>
         </div>
 
         <div class="foot-panel2">
             <ul>
-                <p>Get to Know Us</p>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">About Amazon</a></li>
-                <li><a href="#">Investor Relations</a></li>
-                <li><a href="#">Amazon Devices</a></li>
-                <li><a href="#">Amazon Science</a></li>
+                <p>Explore</p>
+                <li><a href="#catalog">Sample categories</a></li>
+                <li><a href="#catalog">Search examples</a></li>
+                <li><a href="#catalog">Layout patterns</a></li>
+                <li><a href="#catalog">Original assets</a></li>
             </ul>
-
             <ul>
-                <p>Make Money with Us</p>
-                <li><a href="#">Sell products on Amazon</a></li>
-                <li><a href="#">Sell on Amazon Business</a></li>
-                <li><a href="#">Sell apps on Amazon</a></li>
-                <li><a href="#">Become an Affiliate</a></li>
-                <li><a href="#">Advertise Your Products</a></li>
-                <li><a href="#">Self-Publish with Us</a></li>
-                <li><a href="#">Host an Amazon Hub</a></li>
-                <li><a href="#">See More Make Money with Us</a></li>
+                <p>Project</p>
+                <li><a href="#about">About this demo</a></li>
+                <li><a href="#about">Educational scope</a></li>
+                <li><a href="#about">Sample data</a></li>
+                <li><a href="https://github.com/genZadelio/Gamazon">Source code</a></li>
             </ul>
-
             <ul>
-                <p>Amazon Payment Products</p>
-                <li><a href="#">Amazon Business Card</a></li>
-                <li><a href="#">Shop with Points</a></li>
-                <li><a href="#">Reload Your Balance</a></li>
-                <li><a href="#">Amazon Currency Convertor</a></li>
+                <p>Demo features</p>
+                <li><a href="#catalog">Browse locally</a></li>
+                <li><a href="#catalog">Filter in browser</a></li>
+                <li><a href="#catalog">Responsive layout</a></li>
+                <li><a href="#catalog">Accessible controls</a></li>
             </ul>
-
-            <ul>
-                <p>Let Us Help You</p>
-                <li><a href="#">Amazon & COVID-19</a></li>
-                <li><a href="#">Your Account</a></li>
-                <li><a href="#">Your Orders</a></li>
-                <li><a href="#">Shipping Rates & Policies</a></li>
-                <li><a href="#">Returns & Replacements</a></li>
-                <li><a href="#">Manage Your Content & Devices</a></li>
-                <li><a href="#">Help</a></li>
+            <ul id="about">
+                <p>Safety</p>
+                <li><a href="#about">No account</a></li>
+                <li><a href="#about">No checkout</a></li>
+                <li><a href="#about">No personal data</a></li>
+                <li><a href="#about">No affiliation</a></li>
             </ul>
         </div>
 
         <div class="foot-panel3">
-            <div class="logo"></div>
+            <img src="assets/gamazon-logo.svg" alt="Gamazon educational demo">
+            <p>Original educational storefront interface concept with fictional sample content.</p>
         </div>
 
         <div class="foot-panel4">
             <div class="pages">
-                <a href="#" target="_main">Conditions of Use</a>
-                <a href="#" target="_main">Privacy Notice</a>
-                <a href="#" target="_main">Consumer Health Data Privacy Disclosure</a>
-                <a href="#" target="_main">Your Ads Privacy Choices</a>
+                <a href="#about">No accounts</a>
+                <a href="#about">No payments</a>
+                <a href="#about">No tracking</a>
+                <a href="#about">Sample content</a>
             </div>
-
-            <div class="copyright">
-                © 1996-2026, Amazon.com, Inc. or its affiliates
-            </div>
+            <div class="copyright">Gamazon educational demo · Not affiliated with Amazon.com, Amazon EU, or Amazon India</div>
         </div>
     </footer>
 </body>
-
 </html>

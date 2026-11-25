@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gamazon-adelio.netlify.app/sitemap.xml

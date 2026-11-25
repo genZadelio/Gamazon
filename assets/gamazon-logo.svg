@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 60" role="img" aria-labelledby="title desc">
+  <title id="title">Gamazon</title>
+  <desc id="desc">Original Gamazon educational demo logo</desc>
+  <defs>
+    <linearGradient id="mark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#35d6c7"/>
+      <stop offset="1" stop-color="#0a817b"/>
+    </linearGradient>
+  </defs>
+  <rect x="3" y="7" width="46" height="46" rx="14" fill="url(#mark)"/>
+  <path d="M35 20.5c-3.2-3-7-4.7-11.5-4.7C14 15.8 7 23 7 32.2 7 41.5 14.2 49 23.8 49c4.8 0 9-1.7 12.3-5.1V33.8H21.5v7h7.2v2.8c-1.8 1.2-3.7 1.8-5.9 1.8-5.4 0-9.1-4.1-9.1-9.7 0-5.5 3.6-9.5 8.8-9.5 2.6 0 4.8.8 6.8 2.4l5.7-7.1Z" fill="#082b2d"/>
+  <circle cx="36.5" cy="14.5" r="4.5" fill="#ffad4d"/>
+  <text x="56" y="39" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" letter-spacing="-.7">gamazon</text>
+</svg>

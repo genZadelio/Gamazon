@@ -1,143 +1,51 @@
-# 🛒 Amazon-Clone
+# Gamazon — educational storefront interface demo
 
-A modern front-end clone of the Amazon homepage built using **HTML5** and **CSS3**. This project recreates Amazon's user interface with a responsive layout, interactive hover effects, a sticky navigation bar, and a complete shopping homepage experience.
+Gamazon is an original, responsive portfolio project for exploring common ecommerce-interface layout patterns with HTML, CSS, and vanilla JavaScript.
 
-> **Educational Project** — Developed to improve front-end web development skills by replicating a real-world e-commerce website.
+- **Live demo:** https://gamazon-adelio.netlify.app/
+- **Source:** https://github.com/genZadelio/Gamazon
 
----
+## Demo safeguards
 
-## 🌐 Live Demo
+This is a non-transactional interface demonstration:
 
-**GitHub Pages**
+- No login, sign-up, credential, OTP, phone-number, checkout, order, payment, or personal-data form
+- No customer-support, seller, affiliate, gift-card, or delivery workflow
+- No backend, analytics, tracking pixels, or real marketplace connection
+- Fictional sample category names and original illustration assets only
+- Browser-only search and category filtering; no data is stored or transmitted
+- No claims of affiliation with Amazon.com, Amazon EU, Amazon India, or any product brand
 
-```
-https://genZadelio.github.io/Amazon-Clone/
-```
----
+Gamazon is a fictional storefront brand used for this educational interface concept. The public deployment is hosted on Netlify. GitHub Pages remains disabled for this repository.
 
-# ✨ Features
+## Run locally
 
-* Amazon-inspired responsive homepage
-* Sticky navigation bar
-* Search bar with category selector
-* Delivery location section
-* Language selector
-* Account & Lists menu
-* Returns & Orders section
-* Shopping cart icon
-* Hero banner
-* 24 shopping product cards
-* Personalized recommendation section
-* Multi-column Amazon footer
-* Smooth hover animations
-* Clean UI using Flexbox
-
----
-
-# 🛠 Tech Stack
-
-| Technology   | Purpose           |
-| ------------ | ----------------- |
-| HTML5        | Website Structure |
-| CSS3         | Styling & Layout  |
-| Font Awesome | Icons             |
-| Flexbox      | Responsive Layout |
-| Git & GitHub | Version Control   |
-
----
-
-# 📂 Folder Structure
-
-```
-Amazon-Clone/
-│
-├── index.html
-├── style.css
-├── assets
-│   ├── amazon.png
-│   ├── hero.png
-│
-└── README.md
-```
-
----
-
-# 🚀 Installation
-
-Clone the repository
+From this directory:
 
 ```bash
-git clone https://github.com/genZadelio/Amazon-Clone.git
+python -m http.server 8080
 ```
 
-Open the project
+Then open `http://localhost:8080`.
 
-```
-index.html
-```
+## Deploy
 
-That's it!
+The repository root is the Netlify publish directory. `netlify.toml` applies security headers and a restrictive Content Security Policy. The page has no build step or runtime dependencies.
 
----
+## Included
 
-# 💡 What I Learned
+- Responsive navigation, banner, hero, sample catalog, and disclosure-focused footer
+- Original Gamazon vector logo and original SVG category illustrations
+- Browser-only text search and category filtering
+- Keyboard-visible focus states and responsive layouts
+- No account, cart, checkout, payment, tracking, or personal-data collection
 
-Building this project helped me improve my understanding of:
+## Structure
 
-* Semantic HTML
-* CSS Flexbox
-* Responsive web layouts
-* UI cloning
-* CSS hover effects
-* Sticky navigation
-* Layout positioning
-* Website structure
-* Clean code organization
+- `index.html` — page markup
+- `style.css` — responsive design system and components
+- `script.js` — browser-only sample filtering
+- `assets/` — original logo, hero, and category illustrations
+- `netlify.toml` — Netlify publishing and security-header configuration
 
----
-
-# 🔮 Future Improvements
-
-* JavaScript functionality
-* Login page
-* Product search
-* Shopping cart
-* Product sliders
-* Mobile navigation menu
-* Dark mode
-* Backend integration
-* API support
-
----
-
-# 📊 Project Stats
-
-* **Languages:** HTML & CSS
-* **Pages:** 1
-* **Components:** Navigation, Hero, Product Grid, Recommendation Section, Footer
-* **Product Cards:** 24
-* **Responsive:** Yes
-
----
-
-# 👨‍💻 Author
-
-## Adelio Ghosh
-
-
-GitHub:
-https://github.com/genZadelio
-
----
-
-# ⭐ Show Your Support
-
-If you found this project helpful or inspiring, consider giving it a ⭐ on GitHub.
-
----
-
-# 📜 Disclaimer
-
-This project is created **only for educational and learning purposes**.
-
-Amazon®, its logo, images, and trademarks belong to **Amazon.com, Inc.** This repository is **not affiliated with, sponsored by, or endorsed by Amazon**.
+This is not an official store, a payment service, or an affiliated marketplace.

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600" role="img" aria-labelledby="title desc">
+  <title id="title">Gamazon educational interface concept</title>
+  <desc id="desc">Original abstract illustration of a fictional storefront interface</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e9fffb"/>
+      <stop offset=".52" stop-color="#c8f0eb"/>
+      <stop offset="1" stop-color="#b6dfe5"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eef8f7"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#164b55" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="600" fill="url(#bg)"/>
+  <circle cx="170" cy="110" r="170" fill="#8ce4d8" opacity=".35"/>
+  <circle cx="1490" cy="80" r="230" fill="#ffad4d" opacity=".16"/>
+  <circle cx="1240" cy="560" r="280" fill="#56bdb8" opacity=".16"/>
+  <g filter="url(#shadow)" transform="translate(330 80)">
+    <rect width="940" height="440" rx="34" fill="url(#card)" stroke="#ffffff" stroke-width="5"/>
+    <rect x="0" y="0" width="940" height="66" rx="34" fill="#102a36"/>
+    <rect x="0" y="36" width="940" height="30" fill="#102a36"/>
+    <circle cx="38" cy="33" r="9" fill="#35d6c7"/>
+    <circle cx="66" cy="33" r="9" fill="#ffad4d"/>
+    <rect x="96" y="22" width="170" height="22" rx="11" fill="#ffffff" opacity=".88"/>
+    <rect x="300" y="16" width="460" height="34" rx="17" fill="#e9f4f3"/>
+    <circle cx="730" cy="33" r="17" fill="#ffad4d"/>
+    <g transform="translate(42 98)">
+      <rect width="190" height="300" rx="20" fill="#d8f5f0"/>
+      <rect x="24" y="24" width="142" height="112" rx="16" fill="#55c9be"/>
+      <rect x="24" y="158" width="118" height="13" rx="7" fill="#102a36" opacity=".78"/>
+      <rect x="24" y="183" width="86" height="10" rx="5" fill="#79939a"/>
+      <rect x="24" y="231" width="84" height="34" rx="17" fill="#ffad4d"/>
+    </g>
+    <g transform="translate(257 98)">
+      <rect width="190" height="300" rx="20" fill="#e6edf8"/>
+      <rect x="24" y="24" width="142" height="112" rx="16" fill="#708fd1"/>
+      <rect x="24" y="158" width="126" height="13" rx="7" fill="#102a36" opacity=".78"/>
+      <rect x="24" y="183" width="94" height="10" rx="5" fill="#79939a"/>
+      <rect x="24" y="231" width="84" height="34" rx="17" fill="#ffad4d"/>
+    </g>
+    <g transform="translate(472 98)">
+      <rect width="190" height="300" rx="20" fill="#fff0df"/>
+      <rect x="24" y="24" width="142" height="112" rx="16" fill="#f4aa58"/>
+      <rect x="24" y="158" width="112" height="13" rx="7" fill="#102a36" opacity=".78"/>
+      <rect x="24" y="183" width="82" height="10" rx="5" fill="#79939a"/>
+      <rect x="24" y="231" width="84" height="34" rx="17" fill="#ffad4d"/>
+    </g>
+    <g transform="translate(687 98)">
+      <rect width="190" height="300" rx="20" fill="#eee7f8"/>
+      <rect x="24" y="24" width="142" height="112" rx="16" fill="#9c83c7"/>
+      <rect x="24" y="158" width="120" height="13" rx="7" fill="#102a36" opacity=".78"/>
+      <rect x="24" y="183" width="88" height="10" rx="5" fill="#79939a"/>
+      <rect x="24" y="231" width="84" height="34" rx="17" fill="#ffad4d"/>
+    </g>
+  </g>
+  <g transform="translate(90 420)">
+    <rect width="278" height="72" rx="36" fill="#102a36"/>
+    <circle cx="38" cy="36" r="19" fill="#35d6c7"/>
+    <path d="m31 36 5 5 10-12" fill="none" stroke="#082b2d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="70" y="43" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">Fictional samples</text>
+  </g>
+</svg>
